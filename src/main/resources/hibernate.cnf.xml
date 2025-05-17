@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">MySql123@</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="hibernate.connection.pool_size">10</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Echo all executed SQL to stdout --> 
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Automatically create/drop tables (use with caution in prod) -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Annotated class mapping -->
+        <mapping class="com.lcwd.hibernate.entity.Student"/>
+
+    </session-factory>
+</hibernate-configuration>
