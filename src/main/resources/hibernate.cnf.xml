@@ -19,11 +19,11 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
-        <!-- Automatically create/drop tables (use with caution in prod) -->
+        <!-- Automatically create/drop tables -->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Annotated class mapping -->
-        <mapping class="com.lcwd.hibernate.entity.Student"/>
+        <mapping class="com.lcwd.hibernate.entities.Student"/>
 
     </session-factory>
 </hibernate-configuration>
