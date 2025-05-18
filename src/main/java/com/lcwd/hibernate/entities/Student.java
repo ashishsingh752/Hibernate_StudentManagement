@@ -21,7 +21,7 @@ import jakarta.persistence.Table;
 public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private long id;
 
 	@Column(name = "student_name", length = 100)
 	private String name;
@@ -41,12 +41,13 @@ public class Student {
 	@Lob
 	private String about;
 
-	@OneToMany (mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Certificate> certificates = new ArrayList<>();
-	
-	public Student() {};
 
-	public Student(Long id, String name, String collegeName, String father, String phone, boolean active,
+	public Student() {
+	};
+
+	public Student(long id, String name, String collegeName, String father, String phone, boolean active,
 			String about) {
 		super();
 		this.id = id;
@@ -58,11 +59,11 @@ public class Student {
 		this.about = about;
 	}
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -113,8 +114,5 @@ public class Student {
 	public void setAbout(String about) {
 		this.about = about;
 	}
-	
-		
-	 
-	
+
 }
