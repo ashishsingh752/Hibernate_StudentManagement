@@ -31,7 +31,7 @@ public class App
         
         try {
 			transaction = session.beginTransaction();
-			session.persist(student);
+//			session.persist(student);
 			System.out.println("Student Saved Successfully");
 			transaction.commit();
 		} catch (Exception e) {
